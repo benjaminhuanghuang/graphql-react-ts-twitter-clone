@@ -25,5 +25,9 @@ Run server
 - Apollo Client
 - Formik
 
+create app
+```
+  npx create-react-app web --template typescript
 
-
+  yarn create react-app web --template typescript
+```
