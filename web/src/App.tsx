@@ -6,6 +6,7 @@ import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/c
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 // Components
 import Users from "./components/Users";
+import Landing from "./components/Landing";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000",
@@ -17,7 +18,8 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
-          <Users />
+          <Route path="/" element={<Users/>}/>
+          <Route path="/" element={<Landing/>}/>
         </Routes>
       </BrowserRouter>
     </ApolloProvider>
