@@ -13,6 +13,7 @@ npm i apollo-link-context
 set header
 ```
 import { setContext } from "apollo-link-context";
+import { gql, useMutation } from "@apollo/client"
 
 
 const authLink = setContext(async (req, { headers }) => {
@@ -25,4 +26,14 @@ const authLink = setContext(async (req, { headers }) => {
 		}
 	}
 })
+```
+
+```
+const SIGNUP_MUTATION = gql`
+	mutation signup($name: String, $email: String!, $password: String!) {
+		signup(name: $name, email: $email, password: $password) {
+			token
+		}
+	}
+`
 ```
