@@ -2,7 +2,8 @@
 - https://www.apollographql.com/docs/react/get-started/
 
 ```
- npm install @apollo/client graphql
+  
+  npm install @apollo/client graphql
 ```
 
 
