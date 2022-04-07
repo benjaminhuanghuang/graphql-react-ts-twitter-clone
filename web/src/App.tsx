@@ -9,7 +9,7 @@ import Users from "./components/Users";
 import Landing from "./components/Landing";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  uri: "http://localhost:8964",
   cache: new InMemoryCache(),
 });
 
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Users/>}/>
-          <Route path="/" element={<Landing/>}/>
+          <Route path="/landing" element={<Landing/>}/>
         </Routes>
       </BrowserRouter>
     </ApolloProvider>

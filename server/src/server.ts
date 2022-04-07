@@ -9,6 +9,6 @@ const server = new ApolloServer({
   context: createContext,
 })
 
-server.listen().then(({ url }) =>
+server.listen(8964).then(({ url }) =>
   console.log(`Server ready at: ${url}`)
 )
